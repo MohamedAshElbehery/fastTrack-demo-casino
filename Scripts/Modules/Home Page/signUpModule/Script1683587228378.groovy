@@ -17,9 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('https://demo.ft-crm.com/tour', FailureHandling.STOP_ON_FAILURE)
-
-WebUI.maximizeWindow()
 
 WebUI.waitForElementVisible(findTestObject('Home Page/newUser_btn'), GlobalVariable.globalTimeOut)
 

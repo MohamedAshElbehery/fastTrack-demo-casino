@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC002_homepage_logInFlow</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9c519672-836d-4cf9-bfad-cb12f73220c8</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3bee27d0-2322-4c21-a187-597a7b511441</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'elbehery.muhammed@gmail.com'</defaultValue>
+      <description></description>
+      <id>3bee27d0-2322-4c21-a187-597a7b511441</id>
+      <masked>false</masked>
+      <name>loginEmail</name>
+   </variable>
+</TestCaseEntity>
