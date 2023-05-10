@@ -17,14 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+//open browser and maximize window
 WebUI.openBrowser('https://demo.ft-crm.com/', FailureHandling.STOP_ON_FAILURE)
 
 WebUI.maximizeWindow()
 
+//user login
 WebUI.callTestCase(findTestCase('Test Cases/Modules/Main/logInModule'), [('loginEmail'):loginEmail], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(2)
 
+//calling the deposit balance module and sending the intended amounts and the isDepositFailed is set to true to follow the failed deposit path
 WebUI.callTestCase(findTestCase('Modules/Account/depositBalanceAndVerify'), [('amount'):amount,
 	 ('integerAmount'):integerAmount, ('isDepositFailed'):true], FailureHandling.STOP_ON_FAILURE)
 

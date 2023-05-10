@@ -17,22 +17,26 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+//smart waiting returning user button and clicking on it
 WebUI.waitForElementVisible(findTestObject('Home Page/returningUser_btn'), GlobalVariable.globalTimeOut)
 
 WebUI.waitForElementClickable(findTestObject('Home Page/returningUser_btn'), GlobalVariable.globalTimeOut)
 
 WebUI.click(findTestObject('Home Page/returningUser_btn'))
 
+//smart waiting for the email input and writing the email
 WebUI.waitForElementVisible(findTestObject('Home Page/enterEmail_input'), GlobalVariable.globalTimeOut)
 
 WebUI.setText(findTestObject('Home Page/enterEmail_input'), loginEmail)
 
+//smart waiting for the submit button and clicking on it
 WebUI.waitForElementVisible(findTestObject('Home Page/submit_btn'), GlobalVariable.globalTimeOut)
 
 WebUI.waitForElementClickable(findTestObject('Home Page/submit_btn'), GlobalVariable.globalTimeOut)
 
 WebUI.click(findTestObject('Home Page/submit_btn'))
 
+//asserting that the page got redirecting correctly by viewing the fast track message
 assert WebUI.waitForElementVisible(findTestObject('Home Page/fastTrackCRM_h1'), GlobalVariable.globalTimeOut)
 
 

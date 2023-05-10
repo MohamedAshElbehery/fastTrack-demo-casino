@@ -17,14 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+//Open browser and maximizing window
 WebUI.openBrowser('https://demo.ft-crm.com/', FailureHandling.STOP_ON_FAILURE)
 
 WebUI.maximizeWindow()
 
+//user login
 WebUI.callTestCase(findTestCase('Test Cases/Modules/Main/logInModule'), [('loginEmail'):loginEmail], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(2)
 
+//calling the game module
 WebUI.callTestCase(findTestCase('Modules/Account/casinoBusyCat'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
