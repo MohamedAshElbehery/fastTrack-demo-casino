@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC005_casino_playGameAndVerifyBalance</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0c17c42a-07ee-45d5-a85f-7b965129f56d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2404e2d0-f4ad-46ab-b8da-c7bc408008ee</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'elbehery.muhammed@gmail.com'</defaultValue>
+      <description></description>
+      <id>2404e2d0-f4ad-46ab-b8da-c7bc408008ee</id>
+      <masked>false</masked>
+      <name>loginEmail</name>
+   </variable>
+</TestCaseEntity>

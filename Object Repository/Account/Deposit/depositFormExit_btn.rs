@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>depositFailed_btn</name>
+   <name>depositFormExit_btn</name>
    <tag></tag>
-   <elementGuidId>65f5674d-5616-4c79-bb0b-f378a2479d72</elementGuidId>
+   <elementGuidId>895fb9e7-10db-424f-90b7-fb5439206903</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//button[contains(text(),&quot;Deposit Failed&quot;)]</value>
-      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class=&quot;modal__container&quot;]//following::div[@class=&quot;modal__x&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

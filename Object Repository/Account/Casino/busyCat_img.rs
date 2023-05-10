@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>balanceButton_btn</name>
+   <name>busyCat_img</name>
    <tag></tag>
-   <elementGuidId>2e855b4d-1f69-4a60-ab04-14d3df118710</elementGuidId>
+   <elementGuidId>493330d7-4227-4ee0-afe2-450d12a3cc0f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[@class=&quot;button money&quot;]</value>
+         <value>//img[@src=&quot;/_nuxt/img/cat1.9386b22.png&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>

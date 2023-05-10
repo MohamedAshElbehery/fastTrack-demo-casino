@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>depositOK_btn</name>
+   <name>gameBalance_div</name>
    <tag></tag>
-   <elementGuidId>1b615004-da88-4ad3-bb9b-d02b6db43672</elementGuidId>
+   <elementGuidId>8e75c2dc-227e-43ba-b1d5-d5d56e97c7d1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[contains(text(),&quot;OK&quot;)]</value>
+         <value>//div[contains(text(),&quot;Balance:&quot;)]</value>
       </entry>
       <entry>
          <key>BASIC</key>

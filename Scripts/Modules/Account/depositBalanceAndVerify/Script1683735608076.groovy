@@ -17,78 +17,79 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.waitForElementVisible(findTestObject('Account/balanceButton_btn'), GlobalVariable.globalTimeOut)
+WebUI.waitForElementVisible(findTestObject('Account/Deposit/balanceButton_btn'), GlobalVariable.globalTimeOut)
 
-WebUI.waitForElementClickable(findTestObject('Account/balanceButton_btn'), GlobalVariable.globalTimeOut)
+WebUI.waitForElementClickable(findTestObject('Account/Deposit/balanceButton_btn'), GlobalVariable.globalTimeOut)
 
-initialBalanceBeforeCleaning = WebUI.getText(findTestObject('Account/balanceButton_btn'))
+initialBalanceBeforeCleaning = WebUI.getText(findTestObject('Account/Deposit/balanceButton_btn'))
 
-initialBalanceAfterCleaning = WebUI.callTestCase(findTestCase('Test Cases/Modules/Helpers/stringSplitAtValue'),
+initialBalanceAfterCleaning = WebUI.callTestCase(findTestCase('Modules/Helpers/stringSplitAtValue'),
 	 [('desiredString'):initialBalanceBeforeCleaning, ('value'):'[€.]'])
 
-println(initialBalanceAfterCleaning)
+WebUI.click(findTestObject('Account/Deposit/balanceButton_btn'))
 
-WebUI.click(findTestObject('Account/balanceButton_btn'))
+WebUI.waitForElementVisible(findTestObject('Account/Deposit/welcomeBonus_option'), GlobalVariable.globalTimeOut)
 
-WebUI.waitForElementVisible(findTestObject('Account/welcomeBonus_option'), GlobalVariable.globalTimeOut)
+WebUI.waitForElementClickable(findTestObject('Account/Deposit/welcomeBonus_option'), GlobalVariable.globalTimeOut)
 
-WebUI.waitForElementClickable(findTestObject('Account/welcomeBonus_option'), GlobalVariable.globalTimeOut)
+WebUI.click(findTestObject('Account/Deposit/welcomeBonus_option'))
 
-WebUI.click(findTestObject('Account/welcomeBonus_option'))
+WebUI.waitForElementVisible(findTestObject('Account/Deposit/cardDeposit_btn'), GlobalVariable.globalTimeOut)
 
-WebUI.waitForElementVisible(findTestObject('Account/cardDeposit_btn'), GlobalVariable.globalTimeOut)
+WebUI.waitForElementClickable(findTestObject('Account/Deposit/cardDeposit_btn'), GlobalVariable.globalTimeOut)
 
-WebUI.waitForElementClickable(findTestObject('Account/cardDeposit_btn'), GlobalVariable.globalTimeOut)
+WebUI.click(findTestObject('Account/Deposit/cardDeposit_btn'))
 
-WebUI.click(findTestObject('Account/cardDeposit_btn'))
+WebUI.waitForElementVisible(findTestObject('Account/Deposit/depositAmount_btn',[('value'):amount]), GlobalVariable.globalTimeOut)
 
-WebUI.waitForElementVisible(findTestObject('Account/depositAmount_btn',[('value'):amount]), GlobalVariable.globalTimeOut)
+WebUI.waitForElementClickable(findTestObject('Account/Deposit/depositAmount_btn',[('value'):amount]), GlobalVariable.globalTimeOut)
 
-WebUI.waitForElementClickable(findTestObject('Account/depositAmount_btn',[('value'):amount]), GlobalVariable.globalTimeOut)
-
-WebUI.click(findTestObject('Account/depositAmount_btn',[('value'):amount]))
+WebUI.click(findTestObject('Account/Deposit/depositAmount_btn',[('value'):amount]))
 
 if(isDepositFailed == true) {
 	
-	WebUI.waitForElementVisible(findTestObject('Account/depositApproved_btn'), GlobalVariable.globalTimeOut)
+	WebUI.waitForElementVisible(findTestObject('Account/Deposit/depositFailed_btn'), GlobalVariable.globalTimeOut)
 	
-	WebUI.waitForElementClickable(findTestObject('Account/depositApproved_btn'), GlobalVariable.globalTimeOut)
+	WebUI.waitForElementClickable(findTestObject('Account/Deposit/depositFailed_btn'), GlobalVariable.globalTimeOut)
 	
-	WebUI.click(findTestObject('Account/depositApproved_btn'))
+	WebUI.click(findTestObject('Account/Deposit/depositFailed_btn'))
 	
-	assert WebUI.waitForElementVisible(findTestObject('Account/depositNotApprovedMessage_h3'), GlobalVariable.globalTimeOut)
+	assert WebUI.waitForElementVisible(findTestObject('Account/Deposit/depositNotApprovedMessage_h3'), GlobalVariable.globalTimeOut)
 	
-	WebUI.click(findTestObject('Account/depositFormExit_btn'))
+	WebUI.click(findTestObject('Account/Deposit/depositFormExit_btn'))
 	
-	finalBalanceBeforeCleaning = WebUI.getText(findTestObject('Account/balanceButton_btn'))
+	finalBalanceBeforeCleaning = WebUI.getText(findTestObject('Account/Deposit/balanceButton_btn'))
 	
-	finalBalanceAfterCleaning = WebUI.callTestCase(findTestCase('Test Cases/Modules/Helpers/stringSplitAtValue'),
+	finalBalanceAfterCleaning = WebUI.callTestCase(findTestCase('Modules/Helpers/stringSplitAtValue'),
 		[('desiredString'):finalBalanceBeforeCleaning, ('value'):'[€.]'])
    
 	assert Integer.parseInt(initialBalanceAfterCleaning) == Integer.parseInt(finalBalanceAfterCleaning)
 		
+} 
+
+else {
+	
+	WebUI.waitForElementVisible(findTestObject('Account/Deposit/depositApproved_btn'), GlobalVariable.globalTimeOut)
+	
+	WebUI.waitForElementClickable(findTestObject('Account/Deposit/depositApproved_btn'), GlobalVariable.globalTimeOut)
+	
+	WebUI.scrollToElement(findTestObject('Account/Deposit/depositApproved_btn'), GlobalVariable.globalTimeOut)
+	
+	WebUI.click(findTestObject('Account/Deposit/depositApproved_btn'))
+	
+	WebUI.delay(2)
+	
+	assert WebUI.waitForElementVisible(findTestObject('Account/Deposit/depositSuccessMessage_h3'), GlobalVariable.globalTimeOut)
+	
+	WebUI.waitForElementClickable(findTestObject('Account/Deposit/depositOK_btn'), GlobalVariable.globalTimeOut)
+	
+	WebUI.click(findTestObject('Account/Deposit/depositOK_btn'))
+	
+	finalBalanceBeforeCleaning = WebUI.getText(findTestObject('Account/Deposit/balanceButton_btn'))
+	
+	finalBalanceAfterCleaning = WebUI.callTestCase(findTestCase('Test Cases/Modules/Helpers/stringSplitAtValue'),
+		 [('desiredString'):finalBalanceBeforeCleaning, ('value'):'[€.]'])
+	
+	assert Integer.parseInt(initialBalanceAfterCleaning) + integerAmount == Integer.parseInt(finalBalanceAfterCleaning)
+
 }
-
-WebUI.waitForElementVisible(findTestObject('Account/depositApproved_btn'), GlobalVariable.globalTimeOut)
-
-WebUI.waitForElementClickable(findTestObject('Account/depositApproved_btn'), GlobalVariable.globalTimeOut)
-
-WebUI.scrollToElement(findTestObject('Account/depositApproved_btn'), GlobalVariable.globalTimeOut)
-
-WebUI.click(findTestObject('Account/depositApproved_btn'))
-
-WebUI.delay(2)
-
-assert WebUI.waitForElementVisible(findTestObject('Account/depositSuccessMessage_h3'), GlobalVariable.globalTimeOut)
-
-WebUI.waitForElementClickable(findTestObject('Account/depositOK_btn'), GlobalVariable.globalTimeOut)
-
-WebUI.click(findTestObject('Account/depositOK_btn'))
-
-finalBalanceBeforeCleaning = WebUI.getText(findTestObject('Account/balanceButton_btn'))
-
-finalBalanceAfterCleaning = WebUI.callTestCase(findTestCase('Test Cases/Modules/Helpers/stringSplitAtValue'),
-	 [('desiredString'):finalBalanceBeforeCleaning, ('value'):'[€.]'])
-
-assert Integer.parseInt(initialBalanceAfterCleaning) + integerAmount == Integer.parseInt(finalBalanceAfterCleaning)
-

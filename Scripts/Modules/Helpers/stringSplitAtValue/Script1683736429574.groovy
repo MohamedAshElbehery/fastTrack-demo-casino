@@ -17,8 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 String[] stringSplitArray = desiredString.split(value)
 
-println(stringSplitArray[1])
-
-return stringSplitArray[1]
+return stringSplitArray[arrayIndex]

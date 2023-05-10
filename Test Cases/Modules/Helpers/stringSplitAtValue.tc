@@ -17,6 +17,12 @@
       <value></value>
       <variableId>e6cd11fc-9520-4efa-8aac-b30a1ad05df8</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5fe05952-238f-426a-9a56-4d297af74594</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>'€7500.00'</defaultValue>
       <description></description>
@@ -30,5 +36,12 @@
       <id>e6cd11fc-9520-4efa-8aac-b30a1ad05df8</id>
       <masked>false</masked>
       <name>value</name>
+   </variable>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>5fe05952-238f-426a-9a56-4d297af74594</id>
+      <masked>false</masked>
+      <name>arrayIndex</name>
    </variable>
 </TestCaseEntity>

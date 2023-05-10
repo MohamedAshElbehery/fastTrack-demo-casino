@@ -21,7 +21,7 @@ WebUI.openBrowser('https://demo.ft-crm.com/', FailureHandling.STOP_ON_FAILURE)
 
 WebUI.maximizeWindow()
 
-WebUI.callTestCase(findTestCase('Test Cases/Modules/Home Page/logInModule'), [('loginEmail'):loginEmail], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Test Cases/Modules/Main/logInModule'), [('loginEmail'):loginEmail], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(2)
 

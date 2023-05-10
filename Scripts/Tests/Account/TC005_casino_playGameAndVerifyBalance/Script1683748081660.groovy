@@ -17,27 +17,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String randomNumber = WebUI.callTestCase(findTestCase('Modules/Helpers/generateRandomNumberModule'), [:])
-
-String newEmail = 'elbehery.muhammed+demo_' + randomNumber + '@gmail.com'
-
 WebUI.openBrowser('https://demo.ft-crm.com/', FailureHandling.STOP_ON_FAILURE)
 
 WebUI.maximizeWindow()
 
-WebUI.callTestCase(findTestCase('Modules/Main/signUpModule'), [
-	('newEmail'): newEmail,
-	('newPhoneExtension'):newPhoneExtension,
-	('newPhoneNumber'):newPhoneNumber,
-	('newName'):newName,
-	('newPassword'):newPassword
-	], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Test Cases/Modules/Main/logInModule'), [('loginEmail'):loginEmail], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://demo.ft-crm.com/')
+WebUI.delay(2)
 
-WebUI.callTestCase(findTestCase('Test Cases/Modules/Main/logInModule'), [('loginEmail'):newEmail], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Modules/Account/casinoBusyCat'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
-
-
-

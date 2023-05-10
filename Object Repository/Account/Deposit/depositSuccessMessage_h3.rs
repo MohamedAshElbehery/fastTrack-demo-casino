@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>welcomeBonus_option</name>
+   <name>depositSuccessMessage_h3</name>
    <tag></tag>
-   <elementGuidId>ac9d2d71-dadb-4886-82fc-4235fd42ab59</elementGuidId>
+   <elementGuidId>b49d2d90-f73d-484c-baed-b93e623ae220</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//option[@value=&quot;WB200&quot;]</value>
-      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//h3[contains(text(),&quot;Your deposit was successful!&quot;)]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

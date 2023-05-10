@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>depositSuccessMessage_h3</name>
+   <name>casinoOption_a</name>
    <tag></tag>
-   <elementGuidId>b49d2d90-f73d-484c-baed-b93e623ae220</elementGuidId>
+   <elementGuidId>2d6f346d-d28d-48a5-b22a-b9aca78924c9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//h3[contains(text(),&quot;Your deposit was successful!&quot;)]</value>
+         <value>//a[contains(text(),&quot;Casino&quot;)]</value>
       </entry>
       <entry>
          <key>BASIC</key>
