@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC004_deposit_depositFailedAmount</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b727dfe1-9c0f-4848-ba35-c112dbc0cf17</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0c2fa572-42d4-4678-aae8-bbd05eb8d6f9</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>14e11cd1-2687-4a93-98e7-b3b44854cf2d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>b0f80a63-6f8f-4687-acd2-824f866397b0</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'elbehery.muhammed@gmail.com'</defaultValue>
+      <description></description>
+      <id>0c2fa572-42d4-4678-aae8-bbd05eb8d6f9</id>
+      <masked>false</masked>
+      <name>loginEmail</name>
+   </variable>
+   <variable>
+      <defaultValue>'€500'</defaultValue>
+      <description></description>
+      <id>14e11cd1-2687-4a93-98e7-b3b44854cf2d</id>
+      <masked>false</masked>
+      <name>amount</name>
+   </variable>
+   <variable>
+      <defaultValue>500</defaultValue>
+      <description></description>
+      <id>b0f80a63-6f8f-4687-acd2-824f866397b0</id>
+      <masked>false</masked>
+      <name>integerAmount</name>
+   </variable>
+</TestCaseEntity>
