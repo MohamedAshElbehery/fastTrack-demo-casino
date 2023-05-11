@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC006_lottery_buyALotteryTicket</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bbd44ab4-58c7-46fd-a4cf-8d405531449d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>285c9eaa-83c5-4447-96f3-4d504316478b</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>afae218d-a806-449e-b615-56a7c938d0c7</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>55d3de17-1c31-45fe-885a-14c813e384cd</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>GlobalVariable.loginEmail</defaultValue>
+      <description></description>
+      <id>285c9eaa-83c5-4447-96f3-4d504316478b</id>
+      <masked>false</masked>
+      <name>loginEmail</name>
+   </variable>
+   <variable>
+      <defaultValue>2</defaultValue>
+      <description></description>
+      <id>afae218d-a806-449e-b615-56a7c938d0c7</id>
+      <masked>false</masked>
+      <name>drawsValue</name>
+   </variable>
+   <variable>
+      <defaultValue>10</defaultValue>
+      <description></description>
+      <id>55d3de17-1c31-45fe-885a-14c813e384cd</id>
+      <masked>false</masked>
+      <name>drawsCost</name>
+   </variable>
+</TestCaseEntity>

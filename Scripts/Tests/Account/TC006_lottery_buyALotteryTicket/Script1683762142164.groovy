@@ -27,7 +27,8 @@ WebUI.callTestCase(findTestCase('Test Cases/Modules/Main/logInModule'), [('login
 
 WebUI.delay(2)
 
-//calling the game module
-WebUI.callTestCase(findTestCase('Modules/Account/casinoBusyCatAndVerifyBalance'), [:], FailureHandling.STOP_ON_FAILURE)
+//calling the lottery module and choosing the draws value = 2 which means 2 draws and costs 10 euros
+WebUI.callTestCase(findTestCase('Modules/Account/buyLotteryTicketAndVerifyBalance'), [('drawsValue'):drawsValue,
+	 ('drawsCost'):drawsCost], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()

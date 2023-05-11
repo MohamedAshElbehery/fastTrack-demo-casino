@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>casinoBusyCat</name>
+   <name>buyLotteryTicketAndVerifyBalance</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>c512f64e-5363-45bf-80e6-df5d4c8a72d4</testCaseGuid>
+   <testCaseGuid>45e187cf-82e0-43e8-bd2b-3d55eeea879c</testCaseGuid>
 </TestCaseEntity>
